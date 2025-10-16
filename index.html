@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BETSEO GALAXI | Bahis & Casino SEO Çözümleri 2025</title>
+  <meta name="description" content="BETSEO GALAXI — bahis, kumar ve casino siteleri için özel SEO çözümleri: teknik SEO, içerik, backlink, mobil ve Telegram pazarlama ile organik büyüme.">
+  <meta name="keywords" content="BETSEO GALAXI, bahis seo, kumar siteleri seo, casino seo, mobil bahis seo, telegram bahis seo, güvenilir seo, kumar siteleri seo, casino site seo, bahis siteleri seo, nesine casino seo">
+  <meta name="author" content="BETSEO GALAXI">
+
+  <!-- favicon placeholders -->
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <!-- Fonts & icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { theme: { extend: { fontFamily: { inter:['Inter','sans-serif'], orbitron:['Orbitron','sans-serif'] } } } }</script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <style>
+    /* === THEME COLORS & BASE ===
+       Red-black galaxy gradient + glass cards + flashy accents
+    */
+    :root{
+      --bg-grad: radial-gradient(circle at 10% 10%, rgba(140,0,0,0.18) 0%, rgba(0,0,0,0.9) 30%), linear-gradient(180deg,#000 0%, #200000 40%, #3b0000 80%);
+      --card-bg: rgba(255,255,255,0.03);
+      --accent-start: #ff3b3b;
+      --accent-end: #aa0000;
+      --accent-glow: rgba(255,59,59,0.12);
+      --muted: #bfc3c6;
+    }
+    html,body{height:100%}
+    body{
+      margin:0;
+      background: var(--bg-grad);
+      color:#ececec;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+      scroll-behavior:smooth;
+    }
+
+    /* small utilities */
+    .glass{ background: var(--card-bg); border:1px solid rgba(255,255,255,0.04); backdrop-filter: blur(6px); }
+    .btn-accent{
+      background: linear-gradient(90deg,var(--accent-start), #ff6b6b, var(--accent-end));
+      background-size:200% 200%;
+      box-shadow: 0 8px 40px var(--accent-glow), 0 2px 8px rgba(0,0,0,0.6);
+      transition: transform .18s ease, filter .18s ease, background-position .4s ease;
+      color:#0b0b0b; font-weight:700;
+    }
+    .btn-accent:hover{ transform: translateY(-4px) scale(1.02); filter:brightness(1.06); background-position:100% 50% }
+
+    /* marquee */
+    @keyframes marquee { 0% { transform: translateX(0%); } 100% { transform: translateX(-50%); } }
+    .animate-marquee { display:inline-flex; min-width:200%; animation:marquee 22s linear infinite; }
+
+    /* hero stars parallax */
+    .stars, .stars2, .stars3{
+      position:absolute; inset:0; z-index:0; pointer-events:none; background-repeat:repeat;
+    }
+    .stars{ background-image: radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px); background-size: 40px 40px; opacity:0.6; animation: drift 80s linear infinite; }
+    .stars2{ background-image: radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px); background-size: 80px 80px; opacity:0.45; animation: drift 140s linear infinite reverse; }
+    .stars3{ background-image: radial-gradient(rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 160px 160px; opacity:0.3; animation: drift 240s linear infinite; }
+
+    @keyframes drift { from{ transform: translateY(0) } to{ transform: translateY(-200px)} }
+
+    /* reveal animation */
+    .reveal { opacity:0; transform: translateY(10px); transition: all .7s cubic-bezier(.2,.9,.2,1); }
+    .reveal.show { opacity:1; transform: translateY(0); }
+
+    /* testimonials tiny */
+    .testimonial { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; padding:0 1.25rem; }
+    .testimonial p{ margin:0; font-weight:600; color:#f0f0f0; }
+
+    /* responsive tweaks */
+    @media (max-width:640px){
+      .hero-title{ font-size:1.8rem; }
+      .grid-cols-5{ grid-template-columns: repeat(2, minmax(0,1fr)); }
+    }
+
+    /* subtle neon underlines and headings */
+    .accent-underline {
+      position:relative; display:inline-block;
+    }
+    .accent-underline::after{
+      content:""; position:absolute; left:0; right:0; bottom:-6px; height:4px;
+      background: linear-gradient(90deg,var(--accent-start),var(--accent-end)); border-radius:6px; opacity:.9;
+      filter: blur(8px);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- STICKY TOP TESTIMONIAL BAR (10 items) -->
+  <div class="sticky top-4 z-50 flex justify-center px-4">
+    <div class="glass rounded-full px-6 py-3 max-w-5xl w-full relative overflow-hidden h-16 shadow-lg">
+      <div id="testimonialsWrap" class="relative h-full">
+        <!-- 10 testimonials -->
+        <div class="testimonial opacity-0 transition-opacity duration-700">
+          <p>💬 Ahmet K., İstanbul — “BETSEO GALAXI ile kumik performansımız 2x arttı; profesyonel ekip!”</p>
+        </div>
+        <div class="testimonial opacity-0 transition-opacity duration-700">
+          <p>💬 Elif S., Ankara — “Bahis siteleri SEO’su 3 haftada pozisyon yükseltti, tavsiye ederim.”</p>
+        </div>
+        <div class="testimonial opacity-0 transition-opacity duration-700">
+          <p>💬 Mehmet T., İzmir — “Telegram & mobil SEO çalışmaları dönüşümü %70 artırdı.”</p>
+        </div>
+        <div class="testimonial opacity-0 transition-opacity duration-700">
+          <p>💬 Derya B., Bursa — “Güvenilir kumar siteleri SEO konusunda sonuç odaklı ekip.”</p>
+        </div>
+        <div class="testimonial opacity-0 transition-opacity duration-700">
+          <p>💬 Tolga Y., Antalya — “Casino site SEO: organik trafik 5 kat arttı.”</p>
+        </div>
+        <div class="testimonial opacity-0 transition-opacity duration-700">
+          <p>💬 Seda L., İstanbul — “Mobil bahis SEO sayesinde mobil dönüşümler patladı.”</p>
+        </div>
+        <div class="testimonial opacity-0 transition-opacity duration-700">
+          <p>💬 Murat E., Adana — “Bahis com SEO ile rakiplerimiz geride kaldı.”</p>
+        </div>
+        <div class="testimonial opacity-0 transition-opacity duration-700">
+          <p>💬 Ceren G., Konya — “Forum bahis SEO ile etkileşim 3x arttı.”</p>
+        </div>
+        <div class="testimonial opacity-0 transition-opacity duration-700">
+          <p>💬 Ege A., İzmir — “Levant bahis SEO ile uluslararası görünürlük sağladık.”</p>
+        </div>
+        <div class="testimonial opacity-0 transition-opacity duration-700">
+          <p>💬 Nurcan P., İstanbul — “Nesine casino SEO ile trafik zirve yaptı.”</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      const wrap = document.getElementById('testimonialsWrap');
+      const items = Array.from(wrap.querySelectorAll('.testimonial'));
+      let idx = 0;
+      if (items.length) {
+        items[idx].classList.add('opacity-100');
+        setInterval(()=>{
+          items[idx].classList.remove('opacity-100');
+          idx = (idx + 1) % items.length;
+          items[idx].classList.add('opacity-100');
+        },4200);
+      }
+    })();
+  </script>
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-40 py-4 bg-transparent backdrop-blur-sm">
+    <div class="container mx-auto px-6 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <div class="text-2xl">🪐</div>
+        <div>
+          <div class="text-white font-extrabold text-xl">BETSEO GALAXI</div>
+          <div class="text-xs text-gray-400 -mt-1">Bahis & Casino SEO • 2025</div>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-gray-200">
+        <a href="#hero" class="hover:text-white">Ana Sayfa</a>
+        <a href="#hizmetler" class="hover:text-white">Hizmetler</a>
+        <a href="#brands" class="hover:text-white">Casino Yazılımları</a>
+        <a href="#case" class="hover:text-white">Case Study</a>
+        <a href="#fiyat" class="hover:text-white">Paketler</a>
+        <a href="#iletisim" class="hover:text-white">İletişim</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="#iletisim" class="btn-accent px-4 py-2 rounded-full text-sm">Hızlı Teklif Al</a>
+        <button id="menu-toggle" class="md:hidden text-gray-200 text-2xl">☰</button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-black/60 mt-3 rounded-lg mx-4">
+      <div class="px-6 py-4 space-y-2 text-gray-200 font-medium">
+        <a href="#hero" class="block">Ana Sayfa</a>
+        <a href="#hizmetler" class="block">Hizmetler</a>
+        <a href="#brands" class="block">Casino Yazılımları</a>
+        <a href="#case" class="block">Case Study</a>
+        <a href="#fiyat" class="block">Paketler</a>
+        <a href="#iletisim" class="block">İletişim</a>
+      </div>
+    </div>
+  </header>
+
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', ()=> {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+
+  <!-- MARQUEE KEYWORDS -->
+  <section class="py-3 border-t border-b border-white/6">
+    <div class="container mx-auto px-6 overflow-hidden">
+      <div class="whitespace-nowrap animate-marquee flex items-center gap-10 text-sm text-gray-300 font-semibold">
+        <div class="flex items-center gap-8">
+          <span>✅ kumar siteleri seo</span>
+          <span>✅ güvenilir kumar siteleri seo</span>
+          <span>✅ casino site seo</span>
+          <span>✅ güvenilir bet site seo</span>
+          <span>✅ bahis siteleri seo</span>
+          <span>✅ nesine casino seo</span>
+          <span>✅ bahis com seo</span>
+        </div>
+        <div class="flex items-center gap-8">
+          <span>✅ forum bahis seo</span>
+          <span>✅ mobil bahis seo</span>
+          <span>✅ telegram bahis seo</span>
+          <span>✅ levant bahis seo</span>
+          <span>✅ bahis siteleri seo</span>
+          <span>✅ güvenilir bahis siteleri seo</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERO -->
+  <section id="hero" class="relative pt-20 pb-24 overflow-hidden">
+    <div class="stars"></div>
+    <div class="stars2"></div>
+    <div class="stars3"></div>
+
+    <div class="container mx-auto px-6 relative z-10">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="inline-block mb-4 px-4 py-1 rounded-full glass text-sm text-gray-200 font-semibold">2025 • Casino & Bahis SEO</div>
+        <h1 class="hero-title font-orbitron text-5xl md:text-6xl font-extrabold leading-tight text-white drop-shadow-lg mb-6">
+          DOMİNATE THE GAME — <span class="accent-underline">BETSEO GALAXI</span>
+        </h1>
+        <p class="text-lg md:text-2xl text-gray-300 mb-8">
+          Kumar siteleri, casino platformları ve bahis markaları için **yüksek etkili SEO stratejileri**. Teknik altyapı, içerik, backlink ve Telegram pazarlama ile organik görünürlüğünüzü hızla artırıyoruz.
+        </p>
+
+        <div class="flex items-center justify-center gap-4 flex-wrap">
+          <a href="#analiz" class="btn-accent px-6 py-3 rounded-full inline-flex items-center gap-3 text-lg">🚀 Ücretsiz SEO Analizi</a>
+          <a href="#iletisim" class="text-sm px-5 py-3 rounded-full border border-white/10 hover:border-white transition">İletişime Geç</a>
+        </div>
+
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="glass rounded-lg px-4 py-3 text-sm text-gray-200">⏱ Hızlı sonuç — 3–8 hafta</div>
+          <div class="glass rounded-lg px-4 py-3 text-sm text-gray-200">🔒 Gizlilik & Beyaz Şapka SEO</div>
+          <div class="glass rounded-lg px-4 py-3 text-sm text-gray-200">📈 ROI odaklı strateji</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES (expanded) -->
+  <section id="hizmetler" class="py-20">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold mb-8 text-white">✨ Hizmetlerimiz — Casino & Bahis Odaklı</h2>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="glass p-8 rounded-2xl reveal">
+          <div class="text-2xl mb-3 text-red-400"><i class="fas fa-search"></i></div>
+          <h3 class="font-semibold text-xl mb-2">Teknik SEO & Site İçi</h3>
+          <p class="text-gray-300">Hız optimizasyonu, schema, URL yapısı, server & crawl iyileştirmeleri ile Google dostu altyapı kuruyoruz.</p>
+        </div>
+
+        <div class="glass p-8 rounded-2xl reveal">
+          <div class="text-2xl mb-3 text-red-400"><i class="fas fa-file-lines"></i></div>
+          <h3 class="font-semibold text-xl mb-2">İçerik & KW Stratejisi</h3>
+          <p class="text-gray-300">Kumar ve casino nişine uygun, arama amaçlı içerik ve pillar-cluster yapılarıyla organik büyüme sağlanır.</p>
+        </div>
+
+        <div class="glass p-8 rounded-2xl reveal">
+          <div class="text-2xl mb-3 text-red-400"><i class="fas fa-link"></i></div>
+          <h3 class="font-semibold text-xl mb-2">Otorite Backlink & PR</h3>
+          <p class="text-gray-300">Sektöre özel, güvenli ve doğal backlink kampanyaları ile domain otoritenizi yükseltiyoruz.</p>
+        </div>
+
+        <div class="glass p-8 rounded-2xl reveal">
+          <div class="text-2xl mb-3 text-red-400"><i class="fas fa-mobile-alt"></i></div>
+          <h3 class="font-semibold text-xl mb-2">Mobil & UX Opt.</h3>
+          <p class="text-gray-300">Mobil hız, dönüşüm optimizasyonu, AMP/SPA rehberliği — mobil kullanıcılarınız için daha fazla gelir.</p>
+        </div>
+
+        <div class="glass p-8 rounded-2xl reveal">
+          <div class="text-2xl mb-3 text-red-400"><i class="fas fa-robot"></i></div>
+          <h3 class="font-semibold text-xl mb-2">Teknik İzleme & Otomasyon</h3>
+          <p class="text-gray-300">Sürekli tarama, hata bildirimleri, otomatik raporlama ve A/B test destekleriyle hızla optimize ederiz.</p>
+        </div>
+
+        <div class="glass p-8 rounded-2xl reveal">
+          <div class="text-2xl mb-3 text-red-400"><i class="fas fa-users"></i></div>
+          <h3 class="font-semibold text-xl mb-2">Telegram & Mobil Pazarlama</h3>
+          <p class="text-gray-300">Telegram funnel, bot entegrasyonları ve mobil promosyon stratejileriyle direkt kullanıcı kazanımı.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Casino Software Brands (big showcase) -->
+  <section id="brands" class="py-16 bg-transparent">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">🎰 Desteklediğimiz Casino Yazılım Markaları</h2>
+      <p class="text-gray-300 mb-10 max-w-2xl mx-auto">Global oyun sağlayıcılarına özel SEO çözümleri. Altyapınıza uygun strateji ile oyuncular sizi bulur.</p>
+
+      <div class="grid md:grid-cols-5 sm:grid-cols-3 grid-cols-2 gap-6">
+        <div class="glass p-6 rounded-xl text-gray-200 font-semibold hover:scale-105 transition">🎯 Evolution Gaming</div>
+        <div class="glass p-6 rounded-xl text-gray-200 font-semibold hover:scale-105 transition">🔥 Pragmatic Play</div>
+        <div class="glass p-6 rounded-xl text-gray-200 font-semibold hover:scale-105 transition">🎲 NetEnt</div>
+        <div class="glass p-6 rounded-xl text-gray-200 font-semibold hover:scale-105 transition">💎 Microgaming</div>
+        <div class="glass p-6 rounded-xl text-gray-200 font-semibold hover:scale-105 transition">🃏 Playtech</div>
+
+        <div class="glass p-6 rounded-xl text-gray-200 font-semibold hover:scale-105 transition">⭐ Betsoft</div>
+        <div class="glass p-6 rounded-xl text-gray-200 font-semibold hover:scale-105 transition">⚡ Yggdrasil</div>
+        <div class="glass p-6 rounded-xl text-gray-200 font-semibold hover:scale-105 transition">🎮 Endorphina</div>
+        <div class="glass p-6 rounded-xl text-gray-200 font-semibold hover:scale-105 transition">🎡 Red Tiger</div>
+        <div class="glass p-6 rounded-xl text-gray-200 font-semibold hover:scale-105 transition">💰 Play’n GO</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- reveal on scroll script (simple) -->
+  <script>
+    (function(){
+      const els = document.querySelectorAll('.reveal');
+      const io = new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{
+          if(e.isIntersecting) e.target.classList.add('show');
+        });
+      }, { threshold: 0.12 });
+      els.forEach(el=> io.observe(el));
+    })();
+  </script>
+
+<!-- =========================
+     PART 2: Case Studies, Process, Pricing, Testimonials, Contact, Footer
+     ========================= -->
+
+<!-- CASE STUDIES -->
+<section id="case" class="py-20">
+  <div class="container mx-auto px-6">
+    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">📈 Başarı Hikayeleri & Case Studies</h2>
+    <p class="text-gray-300 max-w-2xl mx-auto mb-10">Gerçek sonuçlar — gerçek büyüme. Aşağıda bazı öne çıkan projelerimizin kısa özetleri ve ölçülebilir kazanımları bulunuyor.</p>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <!-- Case 1 -->
+      <div class="glass p-6 rounded-2xl">
+        <div class="flex items-center justify-between mb-3">
+          <h3 class="font-bold text-lg">Levant Bahis</h3>
+          <div class="text-sm text-red-400 font-semibold">6 ay</div>
+        </div>
+        <p class="text-gray-300 text-sm mb-4">Hedefli içerik kümeleri, teknik düzeltmeler ve yerel SERP optimizasyonları ile organik trafik +320%.</p>
+        <div class="flex items-center gap-3">
+          <div class="glass px-3 py-2 rounded-md text-sm text-gray-200">Organik Trafik +320%</div>
+          <div class="glass px-3 py-2 rounded-md text-sm text-gray-200">ROI +180%</div>
+        </div>
+      </div>
+
+      <!-- Case 2 -->
+      <div class="glass p-6 rounded-2xl">
+        <div class="flex items-center justify-between mb-3">
+          <h3 class="font-bold text-lg">Nesine Casino</h3>
+          <div class="text-sm text-red-400 font-semibold">3 ay</div>
+        </div>
+        <p class="text-gray-300 text-sm mb-4">Schema + hız iyileştirmeleriyle slot sayfalarının görünürlüğü hızla arttı, dönüşüm +45%.</p>
+        <div class="flex items-center gap-3">
+          <div class="glass px-3 py-2 rounded-md text-sm text-gray-200">Dönüşüm +45%</div>
+          <div class="glass px-3 py-2 rounded-md text-sm text-gray-200">Sayfa Hız +2.8s → 0.8s</div>
+        </div>
+      </div>
+
+      <!-- Case 3 -->
+      <div class="glass p-6 rounded-2xl">
+        <div class="flex items-center justify-between mb-3">
+          <h3 class="font-bold text-lg">Forum Bahis</h3>
+          <div class="text-sm text-red-400 font-semibold">4 ay</div>
+        </div>
+        <p class="text-gray-300 text-sm mb-4">Topluluk & forum içeriklerinin stratejik kullanımıyla etkileşim +300% ve kullanıcı bağlılığı arttı.</p>
+        <div class="flex items-center gap-3">
+          <div class="glass px-3 py-2 rounded-md text-sm text-gray-200">Etkileşim +300%</div>
+          <div class="glass px-3 py-2 rounded-md text-sm text-gray-200">Avg. Session +38%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS / HOW WE WORK -->
+<section id="process" class="py-20 bg-black/6">
+  <div class="container mx-auto px-6">
+    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">🚀 Nasıl Çalışıyoruz — 5 Adım</h2>
+    <p class="text-gray-300 max-w-2xl mx-auto mb-8">Basit, şeffaf ve sonuç odaklı süreç. Her adım ölçümlenip raporlanır.</p>
+
+    <div class="relative">
+      <!-- timeline line -->
+      <div class="absolute left-1/2 transform -translate-x-1/2 w-1 bg-white/5 h-full hidden md:block"></div>
+
+      <div class="grid md:grid-cols-5 gap-6 relative z-10">
+        <div class="glass p-6 rounded-2xl text-center reveal">
+          <div class="text-2xl font-bold text-red-400 mb-2">1</div>
+          <h4 class="font-semibold mb-2">Keşif & Audit</h4>
+          <p class="text-sm text-gray-300">Derin site taraması, rekabet analizi ve hedef belirleme.</p>
+        </div>
+
+        <div class="glass p-6 rounded-2xl text-center reveal">
+          <div class="text-2xl font-bold text-red-400 mb-2">2</div>
+          <h4 class="font-semibold mb-2">Strateji Oluşturma</h4>
+          <p class="text-sm text-gray-300">KW haritalama, içerik planı, backlink hedefleri.</p>
+        </div>
+
+        <div class="glass p-6 rounded-2xl text-center reveal">
+          <div class="text-2xl font-bold text-red-400 mb-2">3</div>
+          <h4 class="font-semibold mb-2">Uygulama</h4>
+          <p class="text-sm text-gray-300">Teknik düzeltmeler, içerik üretimi, link inşası.</p>
+        </div>
+
+        <div class="glass p-6 rounded-2xl text-center reveal">
+          <div class="text-2xl font-bold text-red-400 mb-2">4</div>
+          <h4 class="font-semibold mb-2">Ölçüm & Optimize</h4>
+          <p class="text-sm text-gray-300">A/B testler, hız iyileştirme, dönüşüm optimizasyonu.</p>
+        </div>
+
+        <div class="glass p-6 rounded-2xl text-center reveal">
+          <div class="text-2xl font-bold text-red-400 mb-2">5</div>
+          <h4 class="font-semibold mb-2">Raporlama</h4>
+          <p class="text-sm text-gray-300">Aylık raporlar, başarı metrikleri ve sonraki adımlar.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING / PACKAGES -->
+<section id="fiyat" class="py-20">
+  <div class="container mx-auto px-6">
+    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">💼 Paketler & Fiyatlandırma</h2>
+    <p class="text-gray-300 max-w-2xl mx-auto mb-8">Şeffaf paketler — ihtiyaç odaklı. Tüm paketler ücretsiz başlangıç analizi ile başlar.</p>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <!-- Starter -->
+      <div class="glass p-6 rounded-2xl text-center reveal">
+        <h3 class="font-bold text-lg mb-3">Başlangıç</h3>
+        <p class="text-gray-300 mb-4">Teknik temizlik, 10 anahtar kelime, aylık rapor</p>
+        <div class="text-xl font-extrabold text-white mb-4">₺3.000 / ay</div>
+        <a href="#iletisim" class="btn-accent px-6 py-3 rounded-full inline-block">Hemen Başla</a>
+      </div>
+
+      <!-- Growth -->
+      <div class="glass p-6 rounded-2xl text-center border-2 border-red-700 reveal">
+        <h3 class="font-bold text-lg mb-3">Büyüme</h3>
+        <p class="text-gray-300 mb-4">25 anahtar kelime, içerik + backlink, 7/24 destek</p>
+        <div class="text-xl font-extrabold text-white mb-4">₺8.500 / ay</div>
+        <a href="#iletisim" class="btn-accent px-6 py-3 rounded-full inline-block">Teklif Al</a>
+      </div>
+
+      <!-- Enterprise -->
+      <div class="glass p-6 rounded-2xl text-center reveal">
+        <h3 class="font-bold text-lg mb-3">Kurumsal</h3>
+        <p class="text-gray-300 mb-4">Özel ekip, SLA, premium raporlama ve uluslararası optimizasyon</p>
+        <div class="text-xl font-extrabold text-white mb-4">Özel Teklif</div>
+        <a href="#iletisim" class="btn-accent px-6 py-3 rounded-full inline-block">Görüşme Talep Et</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPANDED TESTIMONIALS SLIDER (logos + stars) -->
+<section id="testimonials" class="py-20 bg-black/6">
+  <div class="container mx-auto px-6">
+    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">💬 Müşteri Yorumları</h2>
+    <p class="text-gray-300 mb-8 max-w-2xl mx-auto">Sektörden gerçek geri dönüşler. Güvenimiz referanslarımızla ölçülür.</p>
+
+    <div class="relative">
+      <!-- slider -->
+      <div id="testimonialSlider" class="overflow-hidden">
+        <div class="flex gap-6 transition-transform duration-600" style="transform:translateX(0%)">
+          <!-- slide item -->
+          <div class="min-w-full md:min-w-1/3 flex-shrink-0">
+            <div class="glass p-6 rounded-2xl">
+              <div class="flex items-center justify-between mb-3">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 rounded-full bg-red-700 flex items-center justify-center text-white font-bold">LT</div>
+                  <div>
+                    <div class="font-semibold">CasinoTech</div>
+                    <div class="text-sm text-gray-400">CEO</div>
+                  </div>
+                </div>
+                <div class="text-yellow-400">★★★★★</div>
+              </div>
+              <p class="text-gray-300">"Pragmatic Play alt markamız için yapılan optimizasyonlar sayesinde organik gelirimiz ikiye katlandı."</p>
+            </div>
+          </div>
+
+          <div class="min-w-full md:min-w-1/3 flex-shrink-0">
+            <div class="glass p-6 rounded-2xl">
+              <div class="flex items-center justify-between mb-3">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 rounded-full bg-red-700 flex items-center justify-center text-white font-bold">BA</div>
+                  <div>
+                    <div class="font-semibold">BetArena</div>
+                    <div class="text-sm text-gray-400">Growth Lead</div>
+                  </div>
+                </div>
+                <div class="text-yellow-400">★★★★★</div>
+              </div>
+              <p class="text-gray-300">"Organik trafik artışı ve kanal performansıyla beklediğimizin ötesine geçtik. Raporlama mükemmel."</p>
+            </div>
+          </div>
+
+          <div class="min-w-full md:min-w-1/3 flex-shrink-0">
+            <div class="glass p-6 rounded-2xl">
+              <div class="flex items-center justify-between mb-3">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 rounded-full bg-red-700 flex items-center justify-center text-white font-bold">SM</div>
+                  <div>
+                    <div class="font-semibold">SpinMax</div>
+                    <div class="text-sm text-gray-400">Marketing</div>
+                  </div>
+                </div>
+                <div class="text-yellow-400">★★★★★</div>
+              </div>
+              <p class="text-gray-300">"Backlink stratejisiyle domain otoritemiz yükseldi, kampanya performansı çok iyi."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- slider controls -->
+      <div class="flex justify-center gap-3 mt-6">
+        <button id="prevSlide" class="glass px-3 py-2 rounded-md">◀</button>
+        <button id="nextSlide" class="glass px-3 py-2 rounded-md">▶</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT (Formspree + Email visible) -->
+<section id="iletisim" class="py-20">
+  <div class="container mx-auto px-6">
+    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">📬 Teklif & İletişim</h2>
+    <p class="text-gray-300 mb-8 max-w-2xl mx-auto">Ücretsiz analiz talebi veya proje görüşmesi için formu doldurun. E-posta ile de ulaşabilirsiniz.</p>
+
+    <div class="max-w-3xl mx-auto grid md:grid-cols-2 gap-6">
+      <form action="https://formspree.io/f/mwpraykl" method="POST" class="bg-black/30 p-6 rounded-2xl glass space-y-4">
+        <input type="text" name="name" placeholder="Ad Soyad" required class="w-full p-3 rounded-lg bg-black/40 border border-white/5 text-gray-200">
+        <input type="email" name="email" placeholder="E-posta" required class="w-full p-3 rounded-lg bg-black/40 border border-white/5 text-gray-200">
+        <input type="text" name="website" placeholder="Site URL (isteğe bağlı)" class="w-full p-3 rounded-lg bg-black/40 border border-white/5 text-gray-200">
+        <textarea name="message" rows="4" placeholder="Kısa proje özeti / hedefler" required class="w-full p-3 rounded-lg bg-black/40 border border-white/5 text-gray-200"></textarea>
+        <div class="flex items-center gap-3">
+          <button type="submit" class="btn-accent px-6 py-3 rounded-full">🚀 Gönder</button>
+          <div class="text-sm text-gray-300">veya</div>
+          <a href="mailto:betseo.galaxi@gmail.com" class="text-red-400 font-semibold">betseo.galaxi@gmail.com</a>
+        </div>
+      </form>
+
+      <div class="glass p-6 rounded-2xl">
+        <h4 class="font-semibold mb-3">Hızlı Bilgiler</h4>
+        <ul class="text-gray-300 space-y-3 text-sm">
+          <li>📧 E-posta: <a href="mailto:betseo.galaxi@gmail.com" class="text-red-400">betseo.galaxi@gmail.com</a></li>
+          <li>⏱ Çalışma saatleri: 09:00 - 22:00 (UTC+3)</li>
+          <li>🔒 Gizlilik: Proje verileriniz gizli tutulur</li>
+          <li>📁 Ücretsiz ilk analiz + yol haritası</li>
+        </ul>
+
+        <div class="mt-6">
+          <h5 class="font-semibold mb-2">Hangi platformlar?</h5>
+          <div class="flex flex-wrap gap-2">
+            <span class="glass px-3 py-2 rounded-md text-sm">WordPress</span>
+            <span class="glass px-3 py-2 rounded-md text-sm">Custom PHP</span>
+            <span class="glass px-3 py-2 rounded-md text-sm">Node.js</span>
+            <span class="glass px-3 py-2 rounded-md text-sm">React / SPA</span>
+            <span class="glass px-3 py-2 rounded-md text-sm">Gaming Platforms</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-10 border-t border-white/6">
+  <div class="container mx-auto px-6 text-center text-gray-300">
+    <div class="mb-3">
+      <span class="text-white font-bold">🪐 BETSEO GALAXI</span> — Kumar & Casino SEO Uzmanı
+    </div>
+    <div class="text-sm text-gray-400 mb-3">© 2025 BETSEO GALAXI. Tüm hakları saklıdır. 18+ içerik.</div>
+    <div class="flex justify-center gap-4 text-gray-400 text-xl">
+      <a href="#" class="hover:text-white"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="hover:text-white"><i class="fab fa-telegram"></i></a>
+      <a href="#" class="hover:text-white"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </div>
+</footer>
+
+<!-- =========================
+     JS: slider + small UX
+     ========================= -->
+<script>
+  // Simple testimonial slider (three visible slide blocks, loops)
+  (function(){
+    const slider = document.querySelector('#testimonialSlider > div');
+    const slides = slider.children;
+    let index = 0;
+    const total = slides.length;
+    // For responsive, slide width will be 100% per slide on small, third on md+ (we still shift by 100% increments)
+    const update = ()=>{
+      slider.style.transform = `translateX(-${index * 100}%)`;
+    };
+    document.getElementById('nextSlide').addEventListener('click', ()=>{
+      index = (index + 1) % total;
+      update();
+    });
+    document.getElementById('prevSlide').addEventListener('click', ()=>{
+      index = (index - 1 + total) % total;
+      update();
+    });
+    // auto-advance
+    setInterval(()=>{ index = (index + 1) % total; update(); }, 7000);
+  })();
+
+  // Reveals already handled by Part1 script; ensure newly added reveal elements are observed
+  (function(){
+    const els = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting) e.target.classList.add('show');
+      });
+    }, { threshold: 0.12 });
+    els.forEach(el=> io.observe(el));
+  })();
+</script>
+
+</body>
+</html>
